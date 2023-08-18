@@ -10,9 +10,9 @@ public:
     // Constructors
     Assignment()
     {
-        label = "Set label...";
-        description = "Set description...";
-        priority = 0;
+        this->label = "Set label...";
+        this->description = "Set description...";
+        this->priority = 0;
     }
 
     Assignment(string label, string description, unsigned short priority)
