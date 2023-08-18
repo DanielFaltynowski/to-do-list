@@ -31,6 +31,24 @@ public:
         }
     }
 
+    void deleteAssignment(int number)
+    {
+        bool ptr = false;
+        for (int i = 0; i < counter; i++)
+        {
+            if (i == number)
+            {
+                ptr = true;
+                continue;
+            }
+            if (ptr)
+            {
+                list[i - 1] = list[i];
+            }
+        }
+        counter--;
+    }
+
 protected:
     int counter = 0;
     Assignment list[100];
