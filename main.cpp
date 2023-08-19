@@ -46,9 +46,10 @@ void pressAnyKey()
 
 void menu(bool *breaker)
 {
-    cout << "Select option: ";
+    cout << endl << "Select option: ";
     unsigned short option;
     cin >> option;
+    cout << endl;
 
     switch (option)
     {
@@ -110,7 +111,7 @@ void addAssignment()
     Assignment assignment(label, description, priority);
     list.addAssignment(assignment);
 
-    cout << "Added!" << endl;
+    cout << endl << "Added!" << endl;
 }
 
 void deleteAssignment()
@@ -120,7 +121,7 @@ void deleteAssignment()
     cin >> id;
     list.deleteAssignment(id);
 
-    cout << "Deleted!" << endl;
+    cout << endl << "Deleted!" << endl;
 }
 
 void editAssignment() {
@@ -143,5 +144,5 @@ void editAssignment() {
 
     list.editAssignment(id, label, description, priority);
 
-    cout << "Edited!" << endl;
+    cout << endl << "Edited!" << endl;
 }

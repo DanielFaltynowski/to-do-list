@@ -14,9 +14,9 @@ public:
         for (int i = 0; i < counter; i++)
         {
             cout << "---" << "Id: " << i << "---" << endl;
-            cout << "Label: " << list[i].getLabel()
-                 << "; Description: " << list[i].getDescription()
-                 << "; Priority: " << list[i].getPriority() << endl << endl;
+            cout << "Label: " << list[i].getLabel() << endl
+                 << "Description: " << list[i].getDescription() << endl
+                 << "Priority: " << list[i].getPriority() << endl << endl;
         }
     }
 
@@ -27,9 +27,9 @@ public:
             if (priority <= list[i].getPriority())
             {
                 cout << "---" << "Id: " << i << "---" << endl;
-                cout << "Label: " << list[i].getLabel()
-                     << "; Description: " << list[i].getDescription()
-                     << "; Priority: " << list[i].getPriority() << endl << endl;
+                cout << "Label: " << list[i].getLabel() << endl
+                     << "Description: " << list[i].getDescription() << endl
+                     << "Priority: " << list[i].getPriority() << endl << endl;
             }
         }
     }
