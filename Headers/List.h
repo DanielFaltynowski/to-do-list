@@ -12,9 +12,24 @@ public:
     {
         for (int i = 0; i < counter; i++)
         {
-            cout << i << ". " << list[i].getLabel()
+            cout << "---" << "Id: " << i << "---" << endl;
+            cout << "Label: " << list[i].getLabel()
                  << "; Description: " << list[i].getDescription()
-                 << "; Priority: " << list[i].getPriority() << endl;
+                 << "; Priority: " << list[i].getPriority() << endl << endl;
+        }
+    }
+
+    void showAssignments(unsigned short priority)
+    {
+        for (int i = 0; i < counter; i++)
+        {
+            if (priority <= list[i].getPriority())
+            {
+                cout << "---" << "Id: " << i << "---" << endl;
+                cout << "Label: " << list[i].getLabel()
+                     << "; Description: " << list[i].getDescription()
+                     << "; Priority: " << list[i].getPriority() << endl << endl;
+            }
         }
     }
 
