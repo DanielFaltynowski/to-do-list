@@ -23,4 +23,5 @@ To run the program, navigate to the project folder and use the command `bash sta
 2. Show assignments with selected priority.
 3. Add assignment.
 4. Delete assignment.
-5. Exit.
+5. Edit assignment.
+6. Exit.
