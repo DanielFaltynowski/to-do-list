@@ -12,6 +12,7 @@ void showAssignments();
 void showAssignments(unsigned short priority);
 void addAssignment();
 void deleteAssignment();
+void editAssignment();
 
 int main()
 {
@@ -26,7 +27,8 @@ int main()
         cout << "\t2. Show assignments with selected priority." << endl;
         cout << "\t3. Add assignment." << endl;
         cout << "\t4. Delete assignment." << endl;
-        cout << "\t5. Exit." << endl << endl;
+        cout << "\t5. Edit assignment." << endl;
+        cout << "\t6. Exit." << endl << endl;
 
         menu(&breaker);
     }
@@ -70,6 +72,10 @@ void menu(bool *breaker)
             pressAnyKey();
             break;
         case 5:
+            editAssignment();
+            pressAnyKey();
+            break;
+        case 6:
             *breaker = false;
             cout << "Have a nice day!" << endl;
             break;
@@ -115,4 +121,27 @@ void deleteAssignment()
     list.deleteAssignment(id);
 
     cout << "Deleted!" << endl;
+}
+
+void editAssignment() {
+    cout << "Provide the assignment ID you want to edit." << endl;
+    int id;
+    cin >> id;
+
+    cout << "Edit label." << endl;
+    string label;
+    getline(cin, label);
+    getline(cin, label);
+
+    cout << "Edit description." << endl;
+    string description;
+    getline(cin, description);
+
+    cout << "Edit priority." << endl;
+    unsigned short priority;
+    cin >> priority;
+
+    list.editAssignment(id, label, description, priority);
+
+    cout << "Edited!" << endl;
 }

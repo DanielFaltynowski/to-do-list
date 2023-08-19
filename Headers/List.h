@@ -8,6 +8,7 @@ using namespace std;
 class List
 {
 public:
+    //Methods
     void showAssignments()
     {
         for (int i = 0; i < counter; i++)
@@ -62,6 +63,13 @@ public:
             }
         }
         counter--;
+    }
+
+    void editAssignment(int number, string label, string description, unsigned short priority)
+    {
+        list[number].setLabel(label);
+        list[number].setDescription(description);
+        list[number].setPriority(priority);
     }
 
 protected:
